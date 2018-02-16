@@ -1,0 +1,5 @@
+To start the project :
+1)	Start the xampp control panel
+2)	Start Apache and MySql
+3)	Start browser
+4)	Enter the following url: http://localhost/Project/MainPage/MainPage.html
