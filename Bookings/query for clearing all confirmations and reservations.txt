@@ -1,0 +1,1 @@
+UPDATE `tickets1`.`seats` SET `status` = '0';

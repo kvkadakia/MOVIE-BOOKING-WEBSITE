@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+<title>Registration</title>
+<link rel="stylesheet" type="text/css" href="regstyle.css">
+</head>
+
+
+<body background="backreg.jpg" style="background-repeat:no-repeat;background-size: 100% 100%;" >
+
+
+<script type="text/javascript">
+
+  function checkForm(form)
+  {
+
+	
+    if(form.username.value == "") {
+      alert("Error: Username cannot be blank!");
+      form.username.focus();
+      return false;
+    }
+    re = /^\w+$/;
+    if(!re.test(form.username.value)) {
+      alert("Error: Username must contain only letters, numbers and underscores!");
+      form.username.focus();
+      return false;
+    }
+
+    if(form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
+      if(form.pwd1.value.length < 6) {
+        alert("Error: Password must contain at least six characters!");
+        form.pwd1.focus();
+        return false;
+      }
+	  
+	  
+	if(form.bkup.value == "") {
+      alert("Error: Please enter a backup email ID!");
+      form.bk.focus();
+      return false;
+    }
+	
+      if(form.pwd1.value == form.username.value) {
+        alert("Error: Password must be different from Username!");
+        form.pwd1.focus();
+        return false;
+      }
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.pwd1.focus();
+      return false;
+    }
+    return true;
+  }
+
+</script>
+
+
+<!--header!-->
+ <div id="header" align="center">
+ <img src = "Title.png">
+ <!--shortcuts!-->
+<div id="nav" align="right">
+<br>
+<ul>
+    <li><a href="http://localhost/Project/AboutUs/aboutUs.html"style="font-family: Comic Sans MS, cursive, sans-serif; font-size: 15px;color:Orange;">About Us</a></li>
+    <li><a href="http://localhost/Project/Ratings/english.html"style="font-family: Comic Sans MS, cursive, sans-serif; font-size: 15px;color:Orange;">Ratings</a></li>
+    <li><a href="sampleIndex.html"style="font-family: Comic Sans MS, cursive, sans-serif; font-size: 15px;color:Orange;">Bookings</a></li>
+	<li><a href="http://localhost/Project/MainPage/MainPage.html"style="font-family: Comic Sans MS, cursive, sans-serif; font-size: 15px;color:Orange;">Home</a></li>
+ </ul>
+</div>
+</div>
+
+<!--log!-->
+<div id="log">
+<a href="http://localhost/Project/Registration/signIn.html" style="font-family: Comic Sans MS, cursive, sans-serif; font-size: 15px;margin-left:20px;color:Orange;margin-left:20px;">Sign in</a>
+
+</div>
+
+<div id="details">
+<h1><u>Registration</u></h1>
+
+<form action="signUp.php" method="get" onsubmit="return checkForm(this);">
+
+<label for="firstname">First name:</label><input type="text" name="firstname" id="firstname"><br><br>
+<label for="lastname">Last name:</label><input type="text" name="lastname" id="lastname"><br><br>
+<label for="mobileno">Mobile number:</label><input type="text" name="mobileno" id="mobileno"><br><br>
+<label for="address">Address:</label><input type="text" name="address" id="address" style="height:50px"> <br><br><br><br>
+<label for="username">Username:</label><input type="text" name="username" id="username"><br><br>
+<label for="pwd1">Password:</label><input type="password" name="pwd1" id="pwd1"><br><br>
+<label for="pwd2">Re enter Password:</label><input type="password" name="pwd2" id="pwd2"><br><br><br>
+<label for="bkup">Backup emailID:</label><input type="text" name="bkup" id="bkup"><br><br>
+
+<label for="reg" style="color:black;">.</label><input type="submit" value="Register" name="reg">
+
+</form>
+</div>
+<div id="footer">
+
+<p>Copyrights Reserved</p>
+</div>
+
+</body>
+</html>

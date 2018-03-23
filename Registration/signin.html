@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+<title>Logging In</title>
+<link rel="stylesheet" type="text/css" href="regstyle.css">
+</head>
+
+
+<body background="backreg.jpg" style="background-repeat:no-repeat;background-size: 100% 100%;" >
+
+
+<script type="text/javascript">
+
+  function checkForm(form)
+  {
+
+	
+    if(form.username.value == "") {
+      alert("Error: Username cannot be blank!");
+      form.username.focus();
+      return false;
+    }
+    re = /^\w+$/;
+    if(!re.test(form.username.value)) {
+      alert("Error: Username must contain only letters, numbers and underscores!");
+      form.username.focus();
+      return false;
+    }
+
+  
+	  
+	
+    
+      }
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.pwd1.focus();
+      return false;
+    }
+
+
+    return true;
+  }
+
+</script>
+
+
+<!--header!-->
+ <div id="header" align="center">
+ <img src = "Title.png">
+ <!--shortcuts!-->
+<div id="nav" align="right">
+<br>
+<ul>
+    <li><a href="http://localhost/Project/AboutUs/aboutUs.html"style="font-family: Comic Sans MS, cursive, sans-serif; font-size: 15px;color:Orange;">About Us</a></li>
+    <li><a href="http://localhost/Project/Ratings/english.html"style="font-family: Comic Sans MS, cursive, sans-serif; font-size: 15px;color:Orange;">Ratings</a></li>
+    <li><a href="http://localhost/Project/MainPage/MainPage.html#playing"style="font-family: Comic Sans MS, cursive, sans-serif; font-size: 15px;color:Orange;">Bookings</a></li>
+	<li><a href="http://localhost/Project/MainPage/MainPage.html"style="font-family: Comic Sans MS, cursive, sans-serif; font-size: 15px;color:Orange;">Home</a></li>
+ </ul>
+</div>
+</div>
+
+<!--log!-->
+<div id="log">
+<a href="http://localhost/Project/Registration/register.html" style="font-family: Comic Sans MS, cursive, sans-serif; font-size: 15px;color:Orange;margin-left:20px;">Register</a>
+</div>
+
+<div id="details">
+<h1 style="color:orange"><u>Sign In</u></h1>
+
+<form action="signIn.php" method="get" onsubmit="return checkForm(this);">
+
+<br><br>
+<label for="username"style="color:orange">Username:</label><input type="text" name="username" id="username"><br><br>
+<label for="pwd"style="color:orange">Password:</label><input type="password" name="pwd" id="pwd"><br><br>
+
+
+<label for="signIn" style="color:black">.</label><input type="submit" value="Login" name="signIn"style="color:red;background-color:orange">
+
+</form>
+</div>
+<div id="footer">
+
+<p>Copyrights Reserved</p>
+</div>
+
+</body>
+</html>

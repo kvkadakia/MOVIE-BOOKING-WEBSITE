@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>Payment</title>
+<link rel="stylesheet" type="text/css" href="pay.css">
+
+</head>
+	
+<body>
+<!--header!-->
+ <div id="header" align="center">
+ <img src = "Title.png">
+ <!--shortcuts!-->
+<div id="nav" align="right">
+<br>
+<ul>
+    <li><a href="http://localhost/Project/AboutUs/aboutUs.html"style="font-family: Comic Sans MS, cursive, sans-serif; font-size: 15px;color:Orange;">About Us</a></li>
+    <li><a href="http://localhost/Project/Ratings/english.html"style="font-family: Comic Sans MS, cursive, sans-serif; font-size: 15px;color:Orange;">Ratings</a></li>
+    <li><a href="http://localhost/Project/MainPage/Main.php#playing"style="font-family: Comic Sans MS, cursive, sans-serif; font-size: 15px;color:Orange;">Bookings</a></li>
+	<li><a href="http://localhost/Project/MainPage/MainPage.html"style="font-family: Comic Sans MS, cursive, sans-serif; font-size: 15px;color:Orange;">Home</a></li>
+ </ul>
+</div>
+</div>
+
+<!--log!-->
+<div id="log">
+<a href="http://localhost/Project/Registration/logout.php" style="margin-left:20px;color:white;font-family: Comic Sans MS, cursive, sans-serif; font-size: 15px;color:Orange;">logout</a>
+</div>
+
+<div id="details">
+    <section><center>
+    <form id="payment">
+	
+        <fieldset>
+            <legend>Personal Details</legend>
+                    <label for=name>Name</label>
+
+                    <input id=name name=name type=text placeholder="First and last name"  autofocus />
+               
+                    <label for=email>Email</label>
+                    <input id=email name=email type=email placeholder="example@domain.com" required/>
+                
+                    <label for=phone>Phone</label>
+                    <input id=phone name=phone type=tel placeholder="Eg. +14445556666"  />
+             
+        </fieldset>
+        <fieldset>
+            <legend>Address</legend>
+           
+                    <label for="address">Address:</label><input type="text" name="address" id="address" style="height:50px"> <br><br><br>
+
+            
+                    <label for=postcode>Post Code</label>
+                    <input id=postcode name=postcode type=text  />
+
+            
+                    <label for=country>Country</label>
+                    <input id=country name=country type=text  />
+				
+
+        </fieldset>  
+        <fieldset>
+            <legend>Card Details</legend>
+            
+          
+                <fieldset >
+                
+
+
+                    
+                                       
+ 
+                                                                                
+ <select>
+
+  <option value="saab">VISA</option>
+  <option value="opel">MASTERCARD</option>
+
+</select> 
+             
+           
+                 <label for=cardnumber>Card Number</label>
+                    <input id=cardnumber name=cardnumber type=number  />
+                
+                    <label for=secure>Security Code</label>
+                    <input id=secure name=secure type=number  />
+
+                    <label for=namecard>Name on Card</label>
+                    <input id=namecard name=namecard type=text placeholder="Exact namne as on the card"  />
+                
+            
+        </fieldset>
+        
+            <button type=submit formaction="seats33.php">Buy It!</button>
+			
+
+        
+    </form></center>
+</section>
+</div>
+</body>
+</html>
